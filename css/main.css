@@ -1,0 +1,52 @@
+
+/* Global Rules */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap');
+body {
+    background-color: #1d2630;
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1 , h2 , h3 , h4 , h5 , h6 {
+
+    font-family: 'Josefin Sans', sans-serif;
+}
+::-webkit-scrollbar
+{
+    background-color: #abb1b8;
+}
+::-webkit-scrollbar-thumb {
+    background-color: firebrick;
+}
+
+input {
+    -webkit-transition: -webkit-transform 0.8s ease-in;
+    transition: -webkit-transform 0.8s ease-in;
+    -o-transition: transform 0.8s ease-in;
+    transition: transform 0.8s ease-in;
+    transition: transform 0.8s ease-in, -webkit-transform 0.8s ease-in;
+}
+input:focus {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+tr td,th {
+    padding: 10px 0;
+    border: 1px solid #181313;
+}
+#total {
+    background: #B31312;
+}
+#total::before {
+    content: "Total:";
+}
+#alert {
+    position: fixed;
+    z-index: 99999;
+    -webkit-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    padding: 15px 45px;
+    border-radius: 4px;
+    left: -400px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Billing System Application Using JavaScript">
+    <meta name="keywords" content="Billing System Application , HTML , CSS , BOOTSTRAP ,JavaScript ">
+    <meta name="theme-color" content="#317EFB"/>
+    <title>Billing System Application</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- install Google Fonts -->
+
+    <!-- Install fontawesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Install Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Install CSS File -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!--  -->
+<div id="alert"></div>
+<section class="container mt-5" >
+  <h1 class="text-center">Billing System Application</h1>
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <input type="text" placeholder="Title" id="title" class="form-control" required>
+    </div>  
+
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 my-4">
+            <input type="number" onkeyup="getTotal()" placeholder="Price" id="price" class="form-control" required>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 my-4">
+            <input type="number" onkeyup="getTotal()" placeholder="Taxes" id="taxes" class="form-control" required>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 my-4">
+            <input type="number" onkeyup="getTotal()" placeholder="ads" id="ads" class="form-control" required>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-5 col-xl-5 my-4">
+            <input type="number" onkeyup="getTotal()" placeholder="discount" id="discount" class="form-control" required>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-1 col-xl-1 my-4 ">
+            <p id="total"></p>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+        <input type="number" placeholder="Count" id="count" class="form-control" required>
+    </div>  
+
+    <div class="col-sm- mb-4 col-md-12 col-lg-12 col-xl-12 mb-4">
+        <input type="text" placeholder="Category" id="category" class="form-control" required>
+    </div>  
+
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+        <button class="btn w-100 btn-outline-light" id="submit">Create</button>
+    </div> 
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+        <input type="search" placeholder="Search By Title Or Category" onkeyup="searchProduct(this.value)" id="search" class="form-control" required>
+    </div> 
+
+     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+        <button class="btn w-100 btn-outline-light" id="delete_all" >Delete ALL</button>
+    </div>  
+
+</div>
+<table class="table text-center table-responsive">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Taxes</th>
+        <th>Ads</th>
+        <th>Discount</th>
+        <th>Total</th>
+        <th>Category</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody id="tBody"> </tbody>
+</table>
+</section>
+    <!-- Install JS File -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
